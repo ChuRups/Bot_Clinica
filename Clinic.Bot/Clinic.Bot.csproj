@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ApplicationInsightsResourceId>/subscriptions/1a2e90c3-d0e9-41e9-a931-048043a649bd/resourcegroups/clinic-bot-group/providers/microsoft.insights/components/clinic-bot-insights</ApplicationInsightsResourceId>
+    <UserSecretsId>8e700942-b9a5-4f40-bba1-7b3351b26ab7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="rhsgx4ua.42d~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.3.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.2.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.7.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.7.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Azure" Version="4.7.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.7.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.7.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.0.0" />
+    <PackageReference Include="Sendgrid" Version="9.12.6" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+    <ItemGroup>
+      <WCFMetadata Include="Connected Services" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Properties\PublishProfiles\" />
+    </ItemGroup>
+
+    <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
